@@ -49,6 +49,7 @@ kotlin {
 
             api(libs.koin.core) // use api instead of impl to make submodules able to use it
             implementation(libs.lifecycle.viewmodel)
+            implementation(libs.navigation.compose)
         }
     }
 }
