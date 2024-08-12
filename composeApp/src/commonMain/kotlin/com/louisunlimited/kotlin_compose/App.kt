@@ -30,7 +30,9 @@ fun App() {
             startDestination = "home"
         ) {
             composable("home") {
-                val viewModel = viewModel<MainViewModel>()
+                val viewModel = viewModel<MainViewModel> {
+                    MainViewModel("Hello, World!")
+                }
                 val timer by viewModel.timer.collectAsState()
                 Box(
                     modifier = Modifier.fillMaxSize(),
